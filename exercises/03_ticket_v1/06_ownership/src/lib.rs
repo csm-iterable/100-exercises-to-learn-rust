@@ -34,7 +34,7 @@ impl Ticket {
         }
     }
 
-    pub fn title(self) -> String {
+    pub fn title(&self) -> String {
         self.title
     }
 
