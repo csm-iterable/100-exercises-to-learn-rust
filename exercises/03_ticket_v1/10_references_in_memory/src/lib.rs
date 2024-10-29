@@ -12,17 +12,19 @@ mod tests {
     use std::mem::size_of;
 
     #[test]
+    // ? all references have the same size, since they're all pointers.
+    // ? that size is whatever the size of the usize type is, which can vary by platform
     fn u16_ref_size() {
-        assert_eq!(size_of::<&u16>(), todo!());
+        assert_eq!(size_of::<&u16>(), size_of::<usize>());
     }
 
     #[test]
     fn u64_mut_ref_size() {
-        assert_eq!(size_of::<&mut u64>(), todo!());
+        assert_eq!(size_of::<&mut u64>(), size_of::<usize>());
     }
 
     #[test]
     fn ticket_ref_size() {
-        assert_eq!(size_of::<&Ticket>(), todo!());
+        assert_eq!(size_of::<&Ticket>(), size_of::<usize>());
     }
 }

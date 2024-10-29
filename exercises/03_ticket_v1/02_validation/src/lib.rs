@@ -26,7 +26,7 @@ impl Ticket {
         }
 
         if description.is_empty() {
-            panic!("Description cannot be empty")
+            panic!("Description cannot be empty");
         }
 
         if description.len() > 500 {
